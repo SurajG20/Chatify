@@ -1,1 +1,1 @@
-<!-- ChatApp Using React, DaisyUi and Firebase -->
+# ChatApp Using React, DaisyUi and Firebase
