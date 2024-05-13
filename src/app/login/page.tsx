@@ -1,16 +1,29 @@
 'use client';
+import { auth } from '@/lib/firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import Link from 'next/link';
 import React from 'react';
 import { toast } from 'react-toastify';
-
-const page = () => {
-  const handleLogin = (e) => {
+import { useRouter } from 'next/navigation';
+const Login = () => {
+  const [loading, setLoading] = React.useState(false);
+  const router = useRouter();
+  const handleLogin = async (e: any) => {
     e.preventDefault();
+    setLoading(true);
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
-    toast.success('Login Successful');
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      setLoading(false);
+      router.push('/');
+      toast.success('Login Success');
+    } catch (error) {
+      console.log(error);
+      toast.error('Login Failed');
+    }
   };
+
   return (
     <div className='flex min-h-full flex-1 flex-col justify-center px-6  lg:px-8'>
       <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
@@ -19,7 +32,7 @@ const page = () => {
         </h2>
       </div>
       <div className='mt-6 sm:mx-auto sm:w-full sm:max-w-sm'>
-        <form className='space-y-5' onSubmit={(handleLogin)}>
+        <form className='space-y-5' onSubmit={handleLogin}>
           <div>
             <label htmlFor='email' className='block text-sm font-medium leading-6 text-base-content'>
               Email address
@@ -66,8 +79,8 @@ const page = () => {
             </Link>
           </div>
           <div>
-            <button className='btn btn-primary max-w-xl w-full' type='submit'>
-              Sign In
+            <button disabled={loading} className='btn btn-primary max-w-xl w-full' type='submit'>
+              {loading ? 'Loading' : 'Sign In'}
             </button>
           </div>
         </form>
@@ -76,4 +89,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Login;
