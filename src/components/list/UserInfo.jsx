@@ -6,9 +6,9 @@ const UserInfo = () => {
     <div className='flex justify-between items-center p-4 '>
       <div className='inline-flex items-center gap-x-4'>
         <div className='mask mask-circle cursor-pointer'>
-          <Image src={'https://xsgames.co/randomusers/assets/avatars/male/77.jpg'} width={36} height={36} alt='avatar'/>
+          <Image src={'https://xsgames.co/randomusers/assets/avatars/male/77.jpg'} width={32} height={32} alt='avatar'/>
         </div>
-        <h2 className='text-lg font-semibold'>Micheal Johnson</h2>
+        <h2 className=' font-semibold'>Micheal Johnson</h2>
       </div>
       <div className='flex items-center gap-x-3 cursor-pointer'>
         <p>

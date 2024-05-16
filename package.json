@@ -1,5 +1,5 @@
 {
-  "name": "chatify",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,21 +11,17 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.13",
     "emoji-picker-react": "^4.9.2",
-    "firebase": "^10.11.1",
+    "firebase": "^10.12.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-toastify": "^10.0.5"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
     "daisyui": "^4.11.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tailwindcss": "^3.4.1"
   }
 }

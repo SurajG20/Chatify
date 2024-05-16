@@ -6,21 +6,21 @@ const Useroptions = () => {
     <div className='join join-vertical w-full flex-1'>
       <div className='collapse collapse-arrow join-item border border-base-300 '>
         <input type='radio' name='my-accordion-4' defaultChecked />
-        <div className='collapse-title text-xl font-medium'>Chat Settings</div>
+        <div className='collapse-title font-medium'>Chat Settings</div>
         <div className='collapse-content'>
           <p>hello</p>
         </div>
       </div>
       <div className='collapse collapse-arrow join-item border border-base-300'>
         <input type='radio' name='my-accordion-4' />
-        <div className='collapse-title text-xl font-medium'>Privacy and help</div>
+        <div className='collapse-title font-medium'>Privacy and help</div>
         <div className='collapse-content'>
           <p>hello</p>
         </div>
       </div>
       <div className='collapse collapse-arrow join-item border border-base-300'>
         <input type='radio' name='my-accordion-4' />
-        <div className='collapse-title text-xl font-medium'>Shared Photos</div>
+        <div className='collapse-title  font-medium'>Shared Photos</div>
         <div className='collapse-content'>
           <div className='flex items-center justify-between'>
             <div className='flex items-center gap-x-4'>
@@ -48,7 +48,7 @@ const Useroptions = () => {
       </div>
       <div className='collapse collapse-arrow join-item border border-base-300'>
         <input type='radio' name='my-accordion-4' />
-        <div className='collapse-title text-xl font-medium'>Shared Files</div>
+        <div className='collapse-title font-medium'>Shared Files</div>
         <div className='collapse-content'>
           <p>hello</p>
         </div>

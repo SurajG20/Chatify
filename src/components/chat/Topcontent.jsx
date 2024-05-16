@@ -8,14 +8,14 @@ const Topcontent = () => {
         <div className='mask mask-circle cursor-pointer'>
           <Image
             src={'https://xsgames.co/randomusers/assets/avatars/male/77.jpg'}
-            width={36}
-            height={36}
+            width={32}
+            height={32}
             alt='avatar'
           />
         </div>
         <div>
-          <h2 className='text-lg font-semibold'>Micheal Johnson</h2>
-          <p className='text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          <h2 className='text-base font-semibold'>Micheal Johnson</h2>
+          <p className='text-xs'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         </div>
       </div>
       <div className='flex items-center gap-x-4 cursor-pointer'>

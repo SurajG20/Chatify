@@ -2,18 +2,17 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { ChangeEvent, useState } from 'react';
-import { FormEvent } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { auth, db } from '../../lib/firebase';
 import { doc, setDoc, Timestamp } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
 import upload from '@/lib/upload';
 const Register = () => {
-  const [avatar, setAvatar] = useState<{ file: File | undefined; url: string }>({ file: undefined, url: '' });
+  const [avatar, setAvatar] = useState({ file: undefined, url: '' });
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     setLoading(true);
     const formData = new FormData(e.currentTarget);
@@ -21,7 +20,7 @@ const Register = () => {
     const email = formData.get('email');
     const password = formData.get('password');
     try {
-      const res = await createUserWithEmailAndPassword(auth, email as string, password as string);
+      const res = await createUserWithEmailAndPassword(auth, email, password);
       const imgUrl = await upload(avatar.file);
       const docData = {
         username,
@@ -46,7 +45,7 @@ const Register = () => {
     }
   };
 
-  const handleAvatar = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleAvatar = (e) => {
     const file = e.target.files?.[0] ?? undefined;
     const url = file ? URL.createObjectURL(file) : '';
     setAvatar({ file, url });

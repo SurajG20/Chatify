@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,10 +8,9 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'main': `url('/images/background.jpg')`
+        main: `url('/images/background.jpg')`
       }
     }
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')]
 };
-export default config;

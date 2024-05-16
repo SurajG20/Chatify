@@ -14,7 +14,7 @@ const Chatlist = () => {
             />
           </div>
           <div className='flex flex-col gap-y-2 '>
-            <h2 className='text-lg font-medium'>Jane Dope</h2>
+            <h2 className='text-base font-medium'>Jane Dope</h2>
             <h4 className='text-sm'>Hello</h4>
           </div>
         </div>

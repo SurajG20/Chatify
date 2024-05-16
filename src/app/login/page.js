@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 const Login = () => {
   const [loading, setLoading] = React.useState(false);
   const router = useRouter();
-  const handleLogin = async (e: any) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     const email = e.target.email.value;
