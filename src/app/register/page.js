@@ -30,7 +30,7 @@ const Register = () => {
         blocked: [],
         id: res.user.uid
       };
-      await setDoc(doc(db, 'Users', res.user.uid), docData);
+      await setDoc(doc(db, 'users', res.user.uid), docData);
       await setDoc(doc(db, 'userChats', res.user.uid), {
         chats: []
       });
